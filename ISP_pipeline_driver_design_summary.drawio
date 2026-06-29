@@ -1,0 +1,1059 @@
+<mxfile host="app.diagrams.net" agent="Codex" pages="16">
+  <diagram name="01 Probe và đăng ký IMX219 vào Media Controller và V4L2 fr" id="driver-summary-fig-01">
+    <mxGraphModel dx="3588" dy="891" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1962" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f01_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" value="# Hình: Probe và đăng ký IMX219 vào Media Controller và V4L2 framework" vertex="1">
+          <mxGeometry height="42" width="1914" x="24" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_COREPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7a828c;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Kernel core services" vertex="1">
+          <mxGeometry height="118" width="184" x="-40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_DT" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="Device Tree node" vertex="1">
+          <mxGeometry height="56" width="140" x="-18" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_BUSPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#2c6da3;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="I2C subsystem" vertex="1">
+          <mxGeometry height="118" width="184" x="188" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_I2C" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#e5f4ff;strokeColor=#2c6da3;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="I2C client" vertex="1">
+          <mxGeometry height="56" width="140" x="210" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_DRVPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Kernel space" vertex="1">
+          <mxGeometry height="254" width="560" x="-40" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_PROBE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="imx219_probe()" vertex="1">
+          <mxGeometry height="192" width="516" x="-18" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_PWR" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="power resources" vertex="1">
+          <mxGeometry height="56" width="140" x="4" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_SD" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="subdev" vertex="1">
+          <mxGeometry height="56" width="140" x="170" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_PAD" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="source pad" vertex="1">
+          <mxGeometry height="56" width="140" x="336" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_CTRLS" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="controls" vertex="1">
+          <mxGeometry height="56" width="140" x="4" y="386" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_MODE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="mode table" vertex="1">
+          <mxGeometry height="56" width="140" x="170" y="386" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_OPS" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="subdev ops" vertex="1">
+          <mxGeometry height="56" width="140" x="336" y="386" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_FWPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Media Controller và V4L2 framework" vertex="1">
+          <mxGeometry height="240" width="410" x="-40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_ASYNC" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="V4L2 async sensor&#xa;registry" vertex="1">
+          <mxGeometry height="64" width="146" x="-18" y="599" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_GRAPH" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="media graph view" vertex="1">
+          <mxGeometry height="56" width="140" x="190" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_DEVNODE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="subdev devnode" vertex="1">
+          <mxGeometry height="56" width="140" x="190" y="652" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_USERPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="User space" vertex="1">
+          <mxGeometry height="126" width="210" x="390" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_P_USER" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="User app hoặc camera&#xa;stack" vertex="1">
+          <mxGeometry height="64" width="166" x="412" y="647" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_e1" edge="1" parent="1" source="f01_P_ASYNC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" target="f01_P_GRAPH" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_e2" edge="1" parent="1" source="f01_P_ASYNC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" target="f01_P_DEVNODE" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_e3" edge="1" parent="1" source="f01_P_DT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#868e96;strokeWidth=2;dashed=1;dashPattern=4 4" target="f01_P_I2C" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f01_e4" edge="1" parent="1" source="f01_P_I2C" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#868e96;strokeWidth=2;dashed=1;dashPattern=4 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="f01_P_PROBE" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="250" />
+              <mxPoint x="280" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f01_e5" edge="1" parent="1" source="f01_P_PROBE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=3" target="f01_P_ASYNC" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="540" />
+              <mxPoint x="55" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f01_e6" edge="1" parent="1" source="f01_P_DEVNODE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" target="f01_P_USER" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="02 IMX219 Linux driver điều khiển IMX219 sensor" id="driver-summary-fig-02">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1315" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f02_title" value="# Hình: IMX219 Linux driver điều khiển IMX219 sensor" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1267" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_SW4" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="203" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_DRV4" value="IMX219 Linux driver" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="159" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_I2C4" value="I2C control path" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="289" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_SENSOR4" value="IMX219 sensor" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="473" y="92" width="574" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_CTRL4" value="IMX219 control interface" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="495" y="134" width="192" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_PIX4" value="Pixel array" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="713" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_TX4" value="CSI-2 transmitter" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="879" y="134" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_RX4" value="MIPI CSI-2 RX" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffd1dc;strokeColor=#b23a60;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1091" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f02_PIX4" target="f02_TX4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f02_DRV4" target="f02_I2C4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f02_I2C4" target="f02_CTRL4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f02_CTRL4" target="f02_DRV4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f02_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f02_TX4" target="f02_RX4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="03 Format và control của IMX219 qua V4L2 framework" id="driver-summary-fig-03">
+    <mxGraphModel dx="3031" dy="1048" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1118" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f03_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" value="# Hình: Format và control của IMX219 qua V4L2 framework" vertex="1">
+          <mxGeometry height="42" width="1070" x="24" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_USERPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="User space" vertex="1">
+          <mxGeometry height="126" width="210" x="-3" y="303" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_USER" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="User app hoặc camera&#xa;stack" vertex="1">
+          <mxGeometry height="64" width="166" x="19" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_FWPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Media Controller và V4L2 framework" vertex="1">
+          <mxGeometry height="192" width="274" x="240" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_FMTAPI" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="pad format API" vertex="1">
+          <mxGeometry height="56" width="140" x="307" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_CTRLAPI" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="V4L2 control API" vertex="1">
+          <mxGeometry height="56" width="140" x="307" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_DRVPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Kernel space" vertex="1">
+          <mxGeometry height="300" width="420" x="530" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_MODE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="mode table" vertex="1">
+          <mxGeometry height="56" width="140" x="577" y="224" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_STATE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="format state" vertex="1">
+          <mxGeometry height="56" width="140" x="577" y="318" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_HANDLER" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="control handler" vertex="1">
+          <mxGeometry height="56" width="140" x="576" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_I2C" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="I2C control path" vertex="1">
+          <mxGeometry height="56" width="140" x="778" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_F_SENSOR" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="IMX219 control interface" vertex="1">
+          <mxGeometry height="56" width="160" x="990" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_e1" edge="1" parent="1" source="f03_F_MODE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#868e96;strokeWidth=2;dashed=1;dashPattern=4 4" target="f03_F_STATE" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_e2" edge="1" parent="1" source="f03_F_STATE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="f03_F_I2C" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f03_e3" edge="1" parent="1" source="f03_F_HANDLER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="f03_F_I2C" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f03_e4" edge="1" parent="1" source="f03_F_USER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=3" target="f03_F_FMTAPI" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="377" />
+              <mxPoint x="220" y="346" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f03_e5" edge="1" parent="1" source="f03_F_USER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=3" target="f03_F_CTRLAPI" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="377" />
+              <mxPoint x="220" y="424" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f03_e6" edge="1" parent="1" source="f03_F_FMTAPI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="f03_F_STATE" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="820" y="346" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f03_e7" edge="1" parent="1" source="f03_F_CTRLAPI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="f03_F_HANDLER" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f03_e8" edge="1" parent="1" source="f03_F_I2C" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="f03_F_SENSOR" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="04 Luồng start và stop stream qua V4L2 subdev ops" id="driver-summary-fig-04">
+    <mxGraphModel dx="1355" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1917" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f04_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" value="# Hình: Luồng start và stop stream qua V4L2 subdev ops" vertex="1">
+          <mxGeometry height="42" width="1869" x="24" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_USERPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="User space" vertex="1">
+          <mxGeometry height="126" width="210" x="80" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_USER" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="User app hoặc camera&#xa;stack" vertex="1">
+          <mxGeometry height="64" width="166" x="102" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_FWPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Media Controller và V4L2 framework" vertex="1">
+          <mxGeometry height="118" width="274" x="370" y="314" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_FW" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="V4L2 pipeline control" vertex="1">
+          <mxGeometry height="56" width="173" x="420" y="356" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_DRVPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontSize=14;fillColor=#ffe6cc;strokeColor=#d79b00;" value="Kernel space" vertex="1">
+          <mxGeometry height="118" width="767" x="80" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_OPS" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="Registered video ops" vertex="1">
+          <mxGeometry height="56" width="166" x="102" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_STREAM" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="imx219_set_stream(enable)" vertex="1">
+          <mxGeometry height="58" width="199" x="294" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_PM" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="runtime PM" vertex="1">
+          <mxGeometry height="56" width="140" x="519" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_I2C" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="I2C control path" vertex="1">
+          <mxGeometry height="56" width="140" x="685" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_SENSORPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="IMX219 sensor" vertex="1">
+          <mxGeometry height="118" width="470" x="80" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_CTRL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="IMX219 control interface" vertex="1">
+          <mxGeometry height="56" width="192" x="112" y="692" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_S_TX" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="CSI-2 transmitter" vertex="1">
+          <mxGeometry height="56" width="146" x="364" y="692" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_e1" edge="1" parent="1" source="f04_S_OPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" target="f04_S_STREAM" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_e2" edge="1" parent="1" source="f04_S_STREAM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" target="f04_S_PM" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_e3" edge="1" parent="1" source="f04_S_PM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" target="f04_S_I2C" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_e4" edge="1" parent="1" source="f04_S_CTRL" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=2;dashed=1;dashPattern=5 5" target="f04_S_TX" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_e5" edge="1" parent="1" source="f04_S_USER" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=3" target="f04_S_FW" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f04_e6" edge="1" parent="1" source="f04_S_FW" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" target="f04_S_OPS" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="447" y="450" />
+              <mxPoint x="185" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f04_e7" edge="1" parent="1" source="f04_S_I2C" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="f04_S_CTRL" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="755" y="620" />
+              <mxPoint x="208" y="620" />
+            </Array>
+            <mxPoint x="208" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="05 Probe và đăng ký MIPI RX vào Media Controller và V4L2 f" id="driver-summary-fig-05">
+    <mxGraphModel dx="2033" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1961" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f05_title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" value="# Hình: Probe và đăng ký MIPI RX vào Media Controller và V4L2 framework" vertex="1">
+          <mxGeometry height="42" width="1913" x="24" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_COREPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7a828c;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Kernel space - core services" vertex="1">
+          <mxGeometry height="118" width="232" x="42" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_DT" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="Device Tree node" vertex="1">
+          <mxGeometry height="56" width="140" x="88" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_DRVPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Kernel space - driver" vertex="1">
+          <mxGeometry height="180" width="726" x="318" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_PROBE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="mipirx_probe()" vertex="1">
+          <mxGeometry height="118" width="682" x="340" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_RES" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="resources" vertex="1">
+          <mxGeometry height="56" width="140" x="362" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_SD" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="subdev" vertex="1">
+          <mxGeometry height="56" width="140" x="528" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_PADS" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="pads" vertex="1">
+          <mxGeometry height="56" width="140" x="694" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_OPS" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="ops" vertex="1">
+          <mxGeometry height="56" width="140" x="860" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_FWPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="Kernel space - Media Controller và V4L2 framework" vertex="1">
+          <mxGeometry height="118" width="535" x="1088" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_ASYNC" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="V4L2 async registry" vertex="1">
+          <mxGeometry height="56" width="159" x="1110" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_ENTITY" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="media graph view" vertex="1">
+          <mxGeometry height="56" width="140" x="1295" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_DEVNODE" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="subdev devnode" vertex="1">
+          <mxGeometry height="56" width="140" x="1461" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_USERPL" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" value="User space" vertex="1">
+          <mxGeometry height="126" width="210" x="1667" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_P_USER" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" value="User app hoặc camera&#xa;stack" vertex="1">
+          <mxGeometry height="64" width="166" x="1689" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_e1" edge="1" parent="1" source="f05_P_ASYNC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" target="f05_P_ENTITY" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_e2" edge="1" parent="1" source="f05_P_ASYNC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" target="f05_P_DEVNODE" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_e3" edge="1" parent="1" source="f05_P_DT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#868e96;strokeWidth=2;dashed=1;dashPattern=4 4" target="f05_P_PROBE" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_e4" edge="1" parent="1" source="f05_P_PROBE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=3" target="f05_P_ASYNC" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f05_e5" edge="1" parent="1" source="f05_P_DEVNODE" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" target="f05_P_USER" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="06 MIPI RX Linux driver điều khiển MIPI CSI-2 RX IP" id="driver-summary-fig-06">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1978" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f06_title" value="# Hình: MIPI RX Linux driver điều khiển MIPI CSI-2 RX IP" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1930" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_SW4" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="210" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_DRV4" value="MIPI RX Linux driver" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_SENSOR4" value="Camera Sensor" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="296" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_LINK4" value="CSI-2 physical link" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#e5f4ff;strokeColor=#2c6da3;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="480" y="92" width="159" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_MIPI4" value="MIPI CSI-2 RX IP" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="683" y="92" width="1027" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_CTRL4" value="MIPI RX IP control&#xa;interface" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="705" y="134" width="153" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_DPHY4" value="MIPI D-PHY RX" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="884" y="138" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_ALIGN4" value="Lane Aligner" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1050" y="138" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_DEC4" value="Packet Decoder" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1216" y="138" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_UNPACK4" value="RAW Unpack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1382" y="138" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_VOUT4" value="Video Stream Out" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1548" y="138" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_DMA4" value="RAW Capture DMA" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffd1dc;strokeColor=#b23a60;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1754" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_DPHY4" target="f06_ALIGN4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_ALIGN4" target="f06_DEC4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_DEC4" target="f06_UNPACK4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_UNPACK4" target="f06_VOUT4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_SENSOR4" target="f06_LINK4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_LINK4" target="f06_DPHY4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f06_VOUT4" target="f06_DMA4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f06_DRV4" target="f06_CTRL4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f06_e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f06_CTRL4" target="f06_DRV4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="07 Luồng start và stop stream qua V4L2 subdev ops" id="driver-summary-fig-07">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1627" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f07_title" value="# Hình: Luồng start và stop stream qua V4L2 subdev ops" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1579" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="236" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_USER" value="User app or camera stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="192" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_FWPL" value="Kernel space - Media Controller và V4L2 framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="322" y="92" width="379" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_FW" value="Media Controller và V4L2&#xa;framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="416" y="134" width="192" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_DRVPL" value="Kernel space - driver" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="745" y="92" width="798" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_OPS" value="Registered video ops" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="767" y="165" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_STREAM" value="mipirx_s_stream(enable)" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="959" y="165" width="186" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_HELPERS" value="hàm nội bộ stream" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="1171" y="134" width="350" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_START" value="start_stream()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1193" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_S_STOP" value="stop_stream()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1359" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=3" edge="1" parent="1" source="f07_S_OPS" target="f07_S_STREAM">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=3" edge="1" parent="1" source="f07_S_STREAM" target="f07_S_START">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=3" edge="1" parent="1" source="f07_S_STREAM" target="f07_S_STOP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=3" edge="1" parent="1" source="f07_S_USER" target="f07_S_FW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=3" edge="1" parent="1" source="f07_S_FW" target="f07_S_OPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f07_S_START" target="f07_S_FW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f07_S_STOP" target="f07_S_FW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f07_e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#f59f00;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f07_S_FW" target="f07_S_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="08 Luồng IRQ frame-start và phát V4L2 event" id="driver-summary-fig-08">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1289" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f08_title" value="# Hình: Luồng IRQ frame-start và phát V4L2 event" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1241" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_COREPL" value="Kernel space - core services" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7a828c;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="232" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_CORE" value="Linux IRQ subsystem" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="78" y="134" width="159" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_DRVPL" value="Kernel space - driver" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="318" y="92" width="184" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_DRV" value="IRQ callback" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="340" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_FWPL" value="Kernel space - Media Controller và V4L2 framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="546" y="92" width="379" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_EVTQ" value="V4L2 event queue" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="582" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_NODE" value="MIPI subdev node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="748" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="969" y="92" width="236" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_I_USER" value="User app or camera stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="991" y="134" width="192" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#a61e9b;strokeWidth=2;dashed=1;dashPattern=6 6" edge="1" parent="1" source="f08_I_EVTQ" target="f08_I_NODE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#a61e9b;strokeWidth=2;dashed=1;dashPattern=6 6" edge="1" parent="1" source="f08_I_CORE" target="f08_I_DRV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#a61e9b;strokeWidth=2;dashed=1;dashPattern=6 6" edge="1" parent="1" source="f08_I_DRV" target="f08_I_EVTQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f08_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#a61e9b;strokeWidth=2;dashed=1;dashPattern=6 6" edge="1" parent="1" source="f08_I_NODE" target="f08_I_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="09 Probe và đăng ký ISP Lite vào Media Controller và V4L2 " id="driver-summary-fig-09">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1913" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f09_title" value="# Hình: Probe và đăng ký ISP Lite vào Media Controller và V4L2 framework" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1865" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_COREPL" value="Kernel core services" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7a828c;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="184" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_DT" value="Device Tree node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_DRVPL" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="270" y="92" width="560" height="254" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_PROBE" value="isp_probe()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="292" y="134" width="516" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_RES" value="resources" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="314" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_SD" value="subdev" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="480" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_PADS" value="pads" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="646" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_CTRLS" value="controls" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="314" y="250" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_OPS" value="subdev ops" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="480" y="250" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_FWPL" value="Media Controller và V4L2 framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="874" y="92" width="701" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_ASYNC" value="V4L2 async registry" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="896" y="134" width="159" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_GRAPH" value="media graph view" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1081" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_DEVNODE" value="subdev devnode" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1247" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_STAT" value="stat video node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1413" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="1619" y="92" width="210" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_P_USER" value="User app hoặc camera&#xa;stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1641" y="134" width="166" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f09_P_ASYNC" target="f09_P_GRAPH">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f09_P_ASYNC" target="f09_P_DEVNODE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f09_P_ASYNC" target="f09_P_STAT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#868e96;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f09_P_DT" target="f09_P_PROBE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=3" edge="1" parent="1" source="f09_P_PROBE" target="f09_P_ASYNC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f09_P_DEVNODE" target="f09_P_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f09_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f09_P_STAT" target="f09_P_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="10 ISP Lite Linux driver điều khiển ISP Lite IP" id="driver-summary-fig-10">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1679" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f10_title" value="# Hình: ISP Lite Linux driver điều khiển ISP Lite IP" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1631" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_SW4" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="217" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_DRV4" value="ISP Lite Linux driver" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="173" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_RAW4" value="RAW input stream" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="303" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_ISP4" value="ISP Lite IP" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="487" y="92" width="740" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_CTRL4" value="ISP Lite control&#xa;interface" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="509" y="134" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_STAGE4" value="Image processing stages" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="675" y="138" width="186" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_STAT4" value="Statistics engine" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#efd8f7;strokeColor=#8e44ad;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="887" y="138" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_OUT4" value="YUV stream output" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1059" y="138" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_VIP4" value="VIP branch" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffd1dc;strokeColor=#b23a60;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1271" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_STATNODE4" value="stat video node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#efd8f7;strokeColor=#8e44ad;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1455" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f10_STAGE4" target="f10_OUT4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#9c36b5;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f10_STAGE4" target="f10_STAT4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f10_RAW4" target="f10_STAGE4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f10_OUT4" target="f10_VIP4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#9c36b5;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f10_STAT4" target="f10_STATNODE4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f10_DRV4" target="f10_CTRL4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f10_CTRL4" target="f10_DRV4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="11 Luồng start và stop stream qua V4L2 subdev ops" id="driver-summary-fig-11">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1635" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f11_title" value="# Hình: Luồng start và stop stream qua V4L2 subdev ops" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1587" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="210" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_USER" value="User app hoặc camera&#xa;stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="166" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_FWPL" value="Media Controller và V4L2 framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="296" y="92" width="274" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_FW" value="V4L2 pipeline control" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="346" y="134" width="173" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_DRVPL" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="614" y="92" width="753" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_OPS" value="Registered video ops" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="636" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_STREAM" value="isp_s_stream(enable)" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="828" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_START" value="isp_start_stream()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1020" y="134" width="153" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_STOP" value="isp_stop_stream()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1199" y="134" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_S_HW" value="ISP Lite control&#xa;interface" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1411" y="92" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f11_S_OPS" target="f11_S_STREAM">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f11_S_STREAM" target="f11_S_START">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f11_S_STREAM" target="f11_S_STOP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=3" edge="1" parent="1" source="f11_S_USER" target="f11_S_FW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f11_S_FW" target="f11_S_OPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=4" edge="1" parent="1" source="f11_S_START" target="f11_S_HW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=4" edge="1" parent="1" source="f11_S_STOP" target="f11_S_HW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="12 IRQ của ISP Lite được chuyển thành V4L2 event và metada" id="driver-summary-fig-12">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1322" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f12_title" value="# Hình: IRQ của ISP Lite được chuyển thành V4L2 event và metadata" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1274" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_HWPL" value="ISP Lite IP" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="382" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_IRQSRC" value="ISP interrupt source" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_STAT" value="Statistics engine" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#efd8f7;strokeColor=#8e44ad;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="256" y="134" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_DRVPL" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="468" y="92" width="516" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_IRQ" value="ISP IRQ handler" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="490" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_EVENT" value="V4L2 event queue" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="656" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_META" value="stat video node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#efd8f7;strokeColor=#8e44ad;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="822" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="1028" y="92" width="210" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_I_USER" value="User app hoặc camera&#xa;stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1050" y="134" width="166" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f12_I_IRQ" target="f12_I_EVENT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f12_I_IRQ" target="f12_I_META">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f12_I_IRQSRC" target="f12_I_IRQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#9c36b5;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f12_I_STAT" target="f12_I_META">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f12_I_EVENT" target="f12_I_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f12_I_META" target="f12_I_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="13 Probe và đăng ký VIP vào Media Controller và V4L2 frame" id="driver-summary-fig-13">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1913" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f13_title" value="# Hình: Probe và đăng ký VIP vào Media Controller và V4L2 framework" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1865" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_COREPL" value="Kernel core services" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7a828c;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="184" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_DT" value="Device Tree node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f3f4f6;strokeColor=#7a828c;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_DRVPL" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="270" y="92" width="726" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_PROBE" value="vip_probe()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="292" y="134" width="682" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_RES" value="resources" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="314" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_SD" value="subdev" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="480" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_PADS" value="pads" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="646" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_OPS" value="subdev ops" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="812" y="176" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_FWPL" value="Media Controller và V4L2 framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="1040" y="92" width="535" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_ASYNC" value="V4L2 async registry" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1062" y="134" width="159" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_GRAPH" value="media graph view" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1247" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_DEVNODE" value="subdev devnode" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1413" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="1619" y="92" width="210" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_P_USER" value="User app hoặc camera&#xa;stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1641" y="134" width="166" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f13_P_ASYNC" target="f13_P_GRAPH">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f13_P_ASYNC" target="f13_P_DEVNODE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#868e96;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f13_P_DT" target="f13_P_PROBE">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=3" edge="1" parent="1" source="f13_P_PROBE" target="f13_P_ASYNC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f13_P_DEVNODE" target="f13_P_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="14 VIP Linux driver điều khiển VIP IP" id="driver-summary-fig-14">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1661" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f14_title" value="# Hình: VIP Linux driver điều khiển VIP IP" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1613" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_SW4" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="184" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_DRV4" value="VIP Linux driver" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_IN4" value="YUV input stream" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="270" y="92" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_VIP4" value="VIP IP" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="454" y="92" width="926" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_CTRL4" value="VIP control interface" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="476" y="134" width="173" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_CROP4" value="Crop block" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="675" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_SCALE4" value="Downscale block" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="841" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_CSC4" value="Color conversion block" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1007" y="134" width="179" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_OUT4" value="VIP stream output" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1212" y="134" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_CAP4" value="Capture video node" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffd1dc;strokeColor=#b23a60;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1424" y="92" width="153" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f14_CROP4" target="f14_SCALE4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f14_SCALE4" target="f14_CSC4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f14_CSC4" target="f14_OUT4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f14_IN4" target="f14_CROP4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2f9e44;strokeWidth=3" edge="1" parent="1" source="f14_OUT4" target="f14_CAP4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f14_DRV4" target="f14_CTRL4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=2;dashed=1;dashPattern=5 5" edge="1" parent="1" source="f14_CTRL4" target="f14_DRV4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="15 Luồng start và stop stream qua V4L2 subdev ops" id="driver-summary-fig-15">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1668" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f15_title" value="# Hình: Luồng start và stop stream qua V4L2 subdev ops" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="1620" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="210" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_USER" value="User app hoặc camera&#xa;stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="166" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_FWPL" value="Media Controller và V4L2 framework" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3b5ba5;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="296" y="92" width="274" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_FW" value="V4L2 pipeline control" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d6e4ff;strokeColor=#3b5ba5;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="346" y="134" width="173" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_DRVPL" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="614" y="92" width="753" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_OPS" value="Registered video ops" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="636" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_STREAM" value="vip_s_stream(enable)" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="828" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_START" value="vip_start_stream()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1020" y="134" width="153" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_STOP" value="vip_stop_stream()" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1199" y="134" width="146" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_S_HW" value="VIP control interface" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1411" y="92" width="173" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f15_S_OPS" target="f15_S_STREAM">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f15_S_STREAM" target="f15_S_START">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f15_S_STREAM" target="f15_S_STOP">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=3" edge="1" parent="1" source="f15_S_USER" target="f15_S_FW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#2563eb;strokeWidth=3" edge="1" parent="1" source="f15_S_FW" target="f15_S_OPS">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=4" edge="1" parent="1" source="f15_S_START" target="f15_S_HW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15_e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=4" edge="1" parent="1" source="f15_S_STOP" target="f15_S_HW">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="16 IRQ của VIP được chuyển thành V4L2 event" id="driver-summary-fig-16">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="984" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f16_title" value="# Hình: IRQ của VIP được chuyển thành V4L2 event" style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;rounded=0;align=center;verticalAlign=top;fontColor=#000000;fontSize=21" vertex="1" parent="1">
+          <mxGeometry x="24" y="24" width="936" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_HWPL" value="VIP IP" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3f8f46;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="42" y="92" width="210" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_IRQSRC" value="VIP interrupt source" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#d7f3d0;strokeColor=#3f8f46;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="64" y="134" width="166" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_DRVPL" value="Kernel space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c46a1a;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="296" y="92" width="350" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_IRQ" value="VIP IRQ handler" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="318" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_EVENT" value="V4L2 event queue" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffe0b3;strokeColor=#c46a1a;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="484" y="134" width="140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_USERPL" value="User space" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#c9a227;strokeWidth=0.75;verticalAlign=top;align=left;spacingTop=7;spacingLeft=10;fontColor=#242424;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="690" y="92" width="210" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_I_USER" value="User app hoặc camera&#xa;stack" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fff4cc;strokeColor=#c9a227;strokeWidth=0.75;fontColor=#242424;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="712" y="134" width="166" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#ea580c;strokeWidth=2" edge="1" parent="1" source="f16_I_IRQ" target="f16_I_EVENT">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#e8590c;strokeWidth=4" edge="1" parent="1" source="f16_I_IRQSRC" target="f16_I_IRQ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f16_e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=block;endFill=1;strokeColor=#16a34a;strokeWidth=2;dashed=1;dashPattern=4 4" edge="1" parent="1" source="f16_I_EVENT" target="f16_I_USER">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
